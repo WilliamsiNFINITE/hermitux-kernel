@@ -72,6 +72,10 @@ typedef unsigned id_t;
  */
 tid_t sys_getpid(void);
 tid_t sys_getppid(void);
+
+int sys_truncate(const char *path, off_t length);
+int sys_ftruncate(int fd, off_t length);
+
 int sys_fork(void);
 int sys_wait(int* status);
 int sys_execve(const char* name, char * const * argv, char * const * env);
