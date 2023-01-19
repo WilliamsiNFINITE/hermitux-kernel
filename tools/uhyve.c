@@ -926,6 +926,38 @@ static int vcpu_loop(void)
 		case KVM_EXIT_IO:
 			//printf("port 0x%x\n", run->io.port);
 			switch (run->io.port) {
+
+			case UHYVE_PORT_FTRUNCATE: {
+
+				// TODO
+				// unsigned data = *((unsigned*)((size_t)run+run->io.data_offset));
+				// uhyve_ftruncate_t *arg = (uhyve_ftruncate_t *)(guest_mem + data);
+
+				int ret = -1; // TODO creat((const char *)(guest_mem+(size_t)arg->path), arg->mode);
+
+				if(ret == -1)
+					arg->ret = -errno;
+				else
+					arg->ret = ret;
+
+				break;
+				}
+
+			case UHYVE_PORT_TRUNCATE: {
+								// TODO
+				// unsigned data = *((unsigned*)((size_t)run+run->io.data_offset));
+				// uhyve_ftruncate_t *arg = (uhyve_ftruncate_t *)(guest_mem + data);
+
+				int ret = -1; // TODO creat((const char *)(guest_mem+(size_t)arg->path), arg->mode);
+
+				if(ret == -1)
+					arg->ret = -errno;
+				else
+					arg->ret = ret;
+
+				break;
+				
+				}		
 			case UHYVE_PORT_WRITE: {
 				int ret;
 				unsigned data = *((unsigned*)((size_t)run+run->io.data_offset));
