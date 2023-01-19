@@ -4,6 +4,9 @@
 /* Uncomment lines in this file to exclude the implementation of the
  * corresponding syscall from the build */
 
+//#define DISABLE_SYS_TRUNCATE
+//#define DISABLE_SYS_FTRUNCATE
+
 //#define DISABLE_SYS_READ
 //#define DISABLE_SYS_WRITE
 //#define DISABLE_SYS_OPEN
