@@ -16,8 +16,8 @@ Les deux fonctions à implémenter sont truncate et ftruncate. Pour plus d'infor
 
 Ajout des paramètres pour désactiver les appels systèmes dans syscall-config.h.
 Creation des fichierstruncate.c et ftruncate.c dans le repertoire.
-les constructeur ont été ajouté dans le fichier syscall.h
-Ajout des case 'UHYVE_PORT_FTRUNCATE' et 'UHYVE_PORT_TRUNCATE' à implémenter.
+les constructeur ont été ajouté dans le fichier syscall.h.
+Ajout des case 'UHYVE_PORT_FTRUNCATE' et 'UHYVE_PORT_TRUNCATE' à implémenter dans uhyve.c.
 
 
 ## Implementation des appels systèmes ftruncate et truncate
